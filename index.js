@@ -13,11 +13,12 @@ checkButton.addEventListener("click", function validateBillAndCashAmount() {
   let cash = Number(cashGiven.value);
   if(bill === "" || cash === ""){
     showMessage("Enter all fields.");
+  }else if(bill === cash){
     showMessage("No change required");
   }
-  else if (billAmount.value > 0) {
-    // console.log(billAmount.value)
-    // console.log(cashGiven.value)
+  else if (bill > 0) {
+    // console.log(bill)
+    // console.log(cash)
    
     if (cash >= bill) {
         
